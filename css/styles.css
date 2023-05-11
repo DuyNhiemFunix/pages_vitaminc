@@ -160,7 +160,10 @@ ion-icon {
   margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  /* Nếu dùng space-arround thì khi wrap xuống dòng sẽ ở
+  trung tâm, không cần dùng thêm @media quere */
+  /* justify-content: space-between; */
+  justify-content: space-around;
   align-items: center;
   gap: 20px;
   flex-grow: 0;
@@ -188,10 +191,6 @@ ion-icon {
 @media screen and (max-width: 767px) {
   .navbar a:last-child {
     margin-left: unset;
-  }
-
-  .footer {
-    justify-content: center;
   }
 }
 
